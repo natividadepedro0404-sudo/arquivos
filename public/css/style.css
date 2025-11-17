@@ -296,7 +296,6 @@ main {
   transition: transform 0.2s ease;
 }
 
-.brands-dropdown:hover .brands-dropdown-btn i,
 .brands-dropdown.active .brands-dropdown-btn i {
   transform: rotate(180deg);
 }
@@ -327,7 +326,6 @@ main {
   -webkit-filter: none !important;
 }
 
-.brands-dropdown:hover .brands-dropdown-content,
 .brands-dropdown.active .brands-dropdown-content {
   display: block;
 }
@@ -1083,6 +1081,12 @@ main {
     justify-content: center;
   }
   
+  /* Garantir 2 colunas para produtos no index.html em tablets */
+  #product-list.products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
   /* Centralizar conteúdo em dispositivos móveis */
   main {
     display: flex;
@@ -1092,8 +1096,6 @@ main {
   }
   
   #product-list {
-    display: flex;
-    justify-content: center;
     width: 100%;
   }
   
@@ -1225,6 +1227,12 @@ main {
     justify-content: center;
   }
   
+  /* Garantir 2 colunas para produtos no index.html em telas médias */
+  #product-list.products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
   .header-top {
     padding: 0.5rem;
   }
@@ -1289,8 +1297,6 @@ main {
   }
   
   #product-list {
-    display: flex;
-    justify-content: center;
     width: 100%;
     padding: 0 0.5rem;
   }
@@ -1452,8 +1458,6 @@ main {
   }
   
   #product-list {
-    display: flex;
-    justify-content: center;
     width: 100%;
     padding: 0 0.25rem;
   }
@@ -1462,13 +1466,10 @@ main {
     padding: 0 0.25rem;
   }
   
-  /* Admin products grid - single column on very small screens */
-  .admin-list .products-grid {
-    grid-template-columns: 1fr;
+  /* Manter 2 colunas para produtos no index.html em telas pequenas */
+  #product-list.products-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
-    width: 100%;
-    /* Garantir que o grid mantenha seu tamanho independente do conteúdo */
-    align-content: start;
   }
   
   .product-image img {
